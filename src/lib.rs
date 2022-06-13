@@ -262,5 +262,5 @@ pub async fn run(language: tree_sitter::Language, initial_code: &str) -> Result<
     let result = rocket.launch().await;
 
     println!("server shutdown");
-    result
+    Ok(())
 }
