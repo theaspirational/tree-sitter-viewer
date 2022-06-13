@@ -23,5 +23,6 @@ features = ["json"]
 
 [dev-dependencies]
 tree-sitter-cpp = { git = "https://github.com/tree-sitter/tree-sitter-cpp" }
+tree-sitter-wgsl = { git = "https://github.com/davidar/tree-sitter-wgsl", rev = "cacbfbd" }
 tokio = { version = "1.13.0", features = ["full"] }
 
