@@ -69,7 +69,7 @@ export default {
   mounted: function () {
     this.$nextTick(function () {
       this.editor = monaco.editor.create(this.$refs["container"], {
-        language: "cpp",
+        language: "python",
         theme: "vs-dark",
       });
 
