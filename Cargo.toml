@@ -9,7 +9,7 @@ edition = "2021"
 #crate-type = ["cdylib"]
 
 [[example]]
-name = "cpp_example"
+name = "orsl_example"
 
 [dependencies]
 rust-embed="6.4"
@@ -23,7 +23,8 @@ features = ["json"]
 
 [dev-dependencies]
 tree-sitter-cpp = { git = "https://github.com/tree-sitter/tree-sitter-cpp" }
-tree-sitter-orsl = { git = "https://github.com/theaspirational/tree_sitter_orsl" }
+# tree-sitter-orsl = {git="ssh://git@github.com/theaspirational/tree_sitter_orsl.git"}
+tree-sitter-orsl = {git="ssh://git@github.com/theaspirational/tree_sitter_orsl.git"}
 tree-sitter-python = { git = "https://github.com/tree-sitter/tree-sitter-python" }
 tree-sitter-wgsl = "0.0.6"
 tokio = { version = "1.19", features = ["full"] }

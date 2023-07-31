@@ -138,7 +138,7 @@ fn json_from_ast(ast: &Rc<RefCell<ASTNode>>) -> serde_json::Map<String, serde_js
     map
 }
 
-#[get("/api/initial_code")]
+#[get("/orsl-api/initial_code")]
 fn initial_code(global: &State<Arc<GlobalState>>) -> (Status, (ContentType, Vec<u8>)) {
     let mut map = serde_json::Map::new();
     let code = &*global.initial_code.lock().expect("can't lock code");
@@ -149,7 +149,7 @@ fn initial_code(global: &State<Arc<GlobalState>>) -> (Status, (ContentType, Vec<
     )
 }
 
-#[post("/api/update_code", format = "json", data = "<payload>")]
+#[post("/orsl-api/update_code", format = "json", data = "<payload>")]
 fn update_code(payload: Json<CodePayload>, global: &State<Arc<GlobalState>>) -> (Status, (ContentType, Vec<u8>)) {
     let mut parser = tree_sitter::Parser::new();
     parser

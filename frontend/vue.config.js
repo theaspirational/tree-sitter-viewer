@@ -3,9 +3,10 @@ const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 
 module.exports = {
-    configureWebpack: {
-      plugins: [
-        new MonacoWebpackPlugin()
-      ]
-    }
+  publicPath: '/orsl-tool/',
+  configureWebpack: {
+    plugins: [
+      new MonacoWebpackPlugin()
+    ]
   }
+}

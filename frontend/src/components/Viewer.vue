@@ -74,7 +74,7 @@ export default {
       });
 
       (async () => {
-        const response = await fetch("/api/initial_code");
+        const response = await fetch("/orsl-api/initial_code");
         let json = await response.json();
         console.log(json);
 
@@ -119,7 +119,7 @@ export default {
         let payload = { code: this.editor.getValue() };
         console.log(payload);
         let self = this;
-        this.postData("/api/update_code", payload).then((result) => {
+        this.postData("/orsl-api/update_code", payload).then((result) => {
           console.log("result", result, self.treeData);
           Object.assign(self.treeData, result);
           console.log("assigned", self.treeData);
